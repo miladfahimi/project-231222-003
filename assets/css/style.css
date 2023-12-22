@@ -547,6 +547,28 @@ a.menuzord-brand {
 .fleets-section .tab-wrap li.active:after {
   height: 2px;
 }
+.color-white-brand {
+  color: #fff !important;
+}
+.color-white {
+  color: #fff !important;
+}
+
+.color-white:hover {
+  color: gray !important;
+}
+.color-black {
+  color: #000 !important;
+}
+
+.color-black:hover {
+  color: gray !important;
+}
+@media screen and (max-width: 991px) {
+  .color-white {
+    color: #000 !important;
+  }
+}
 a.menuzord-brand {
   color: #000;
   font-size: 24px;
@@ -649,7 +671,7 @@ a.menuzord-brand {
   text-align: right;
 }
 .menu-right-part .search-ecomm-menu-btn a {
-  color: #fff;
+  color: #000;
   font-size: 18px;
   position: relative;
 }
