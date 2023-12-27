@@ -98,6 +98,30 @@
               <div class="col-md-6">
                 <input class="form-control user-mail" type="email" name="email" placeholder="Your Email*" required="">
               </div>
+              <div class="col-md-6">
+                <select class="form-control user-web select-style-service " name="service" required="">
+                  <option class="select-options-service" value="">Select a Service*</option>
+                  <option class="select-options-service" value="service1">VIP</option>
+                  <option class="select-options-service" value="service2">EVENT</option>
+                  <option class="select-options-service" value="service3">GRUPPRESOR: IDROTTSRESOR</option>
+                  <option class="select-options-service" value="service3">IDROTTSRESOR</option>
+                  <option class="select-options-service" value="service3">SIGHTSEEING</option>
+                  <option class="select-options-service" value="service3">SKOLRESOR</option>
+                  <option class="select-options-service" value="service3">HYRA BUSS</option>
+                  <option class="select-options-service" value="service3">AIRPORT TRANSFER</option>
+                  <option class="select-options-service" value="service3">BUSSAR FÖR ARRANGÖRER OCH EVENTBYRÅER</option>
+                  <option class="select-options-service" value="service3">PROJEKTLEDARE</option>
+                  <option class="select-options-service" value="service3">TRAFIKLEDARE</option>
+                  <option class="select-options-service" value="service3">SÄKERHETS OCH BEVAKNINGSPERSONAL</option>
+                  <option class="select-options-service" value="service3">TJÄNSTER TILL BUSS & TRANSPORTFÖRETAG</option>
+                  <option class="select-options-service" value="service3">UTHYRNING AV BUSSFÖRARE & TRAFIKLEDARE
+                  </option>
+                  <!-- Add more options as needed -->
+                </select>
+              </div>
+              <div class="col-md-6">
+                <input class="form-control user-web" type="text" name="website" placeholder="phone*">
+              </div>
 
             </div><!-- /.input-box -->
 
@@ -134,6 +158,28 @@
   <!-- End of Footer Area -->
 
   <!-- Js Functions  for Menu -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var name = document.querySelector('input[name="name"]').value;
+      var email = document.querySelector('input[name="email"]').value;
+      var service = document.querySelector('select[name="service"]').value;
+      var phone = document.querySelector('input[name="website"]').value; // Assuming 'website' field is for the phone number
+      var message = document.querySelector('textarea[name="message"]').value;
+
+      var emailSubject = 'Contact Form Submission';
+      var emailBody = 'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Service: ' + service + '\n' +
+        'Phone: ' + phone + '\n' +
+        'Message: ' + message;
+
+      var mailtoLink = 'mailto:example@example.com?subject=' + encodeURIComponent(emailSubject) +
+        '&body=' + encodeURIComponent(emailBody);
+      window.location.href = mailtoLink;
+    });
+  </script>
   <script src="assets\js\vendor\jquery-2.1.4.min.js"></script>
   <script src="assets\js\owl.carousel.min.js"></script>
   <script src="assets\js\isotope.pkgd.min.js"></script>
