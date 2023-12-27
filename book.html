@@ -168,17 +168,28 @@
       var phone = document.querySelector('input[name="website"]').value; // Assuming 'website' field is for the phone number
       var message = document.querySelector('textarea[name="message"]').value;
 
-      var emailSubject = 'Contact Form Submission';
-      var emailBody = 'Name: ' + name + '\n' +
-        'Email: ' + email + '\n' +
-        'Service: ' + service + '\n' +
-        'Phone: ' + phone + '\n' +
-        'Message: ' + message;
+      var emailSubject = 'Förfrågan om Tjänst';
+      var emailBody =
+        'Kära SWEDISH TRANSFER SERVICE-team,\n\n' +
+        'Jag är intresserad av att lära mig mer om era tjänster och skulle vilja förfråga om följande:\n\n' +
+        '----------------------------------------\n' +
+        'Mina kontaktuppgifter:\n' +
+        'Namn: ' + name + '\n' +
+        'E-post: ' + email + '\n' +
+        'Telefon: ' + phone + '\n' +
+        'Intresserad tjänst: ' + service + '\n\n' +
+        'Mitt meddelande/förfrågan:\n' + message + '\n' +
+        '----------------------------------------\n\n' +
+        'Jag ser fram emot att höra från er för att diskutera mina behov mer i detalj och förstå hur SWEDISH TRANSFER SERVICE kan hjälpa mig.\n\n' +
+        'Tack för er tid och hjälp.\n\n' +
+        'Med vänliga hälsningar,\n' +
+        name;
 
       var mailtoLink = 'mailto:example@example.com?subject=' + encodeURIComponent(emailSubject) +
         '&body=' + encodeURIComponent(emailBody);
       window.location.href = mailtoLink;
     });
+
   </script>
   <script src="assets\js\vendor\jquery-2.1.4.min.js"></script>
   <script src="assets\js\owl.carousel.min.js"></script>
