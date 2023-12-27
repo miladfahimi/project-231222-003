@@ -93,14 +93,14 @@
           <form action="mailto:example@example.com" method="post" enctype="text/plain">
             <div class="input-box">
               <div class="col-md-6">
-                <input class="form-control user-name" type="text" name="name" placeholder="Your Name*" required="">
+                <input class="form-control user-name" type="text" name="name" placeholder="Din Namn*" required="">
               </div>
               <div class="col-md-6">
-                <input class="form-control user-mail" type="email" name="email" placeholder="Your Email*" required="">
+                <input class="form-control user-mail" type="email" name="email" placeholder="Din Email*" required="">
               </div>
               <div class="col-md-6">
                 <select class="form-control user-web select-style-service " name="service" required="">
-                  <option class="select-options-service" value="">Select a Service*</option>
+                  <option class="select-options-service" value="">Valj en Service*</option>
                   <option class="select-options-service" value="service1">VIP</option>
                   <option class="select-options-service" value="service2">EVENT</option>
                   <option class="select-options-service" value="service3">GRUPPRESOR: IDROTTSRESOR</option>
@@ -165,32 +165,28 @@
       var name = document.querySelector('input[name="name"]').value;
       var email = document.querySelector('input[name="email"]').value;
       var service = document.querySelector('select[name="service"]').value;
-      var phone = document.querySelector('input[name="website"]').value; // Assuming 'website' field is for the phone number
+      var phone = document.querySelector('input[name="website"]').value; // Assuming 'website' is the phone number
       var message = document.querySelector('textarea[name="message"]').value;
 
-      var emailSubject = 'Förfrågan om Tjänst';
       var emailBody =
-        'Kära SWEDISH TRANSFER SERVICE-team,\n\n' +
-        'Jag är intresserad av att lära mig mer om era tjänster och skulle vilja förfråga om följande:\n\n' +
-        '----------------------------------------\n' +
-        'Mina kontaktuppgifter:\n' +
-        'Namn: ' + name + '\n' +
-        'E-post: ' + email + '\n' +
-        'Telefon: ' + phone + '\n' +
-        'Intresserad tjänst: ' + service + '\n\n' +
-        'Mitt meddelande/förfrågan:\n' + message + '\n' +
-        '----------------------------------------\n\n' +
-        'Jag ser fram emot att höra från er för att diskutera mina behov mer i detalj och förstå hur SWEDISH TRANSFER SERVICE kan hjälpa mig.\n\n' +
-        'Tack för er tid och hjälp.\n\n' +
-        'Med vänliga hälsningar,\n' +
-        name;
+        'Hello,\n\n' +
+        'You have received a new service inquiry from your website. Here are the details:\n\n' +
+        '------------------------------------------------\n' +
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Service Interested In: ' + service + '\n' +
+        'Contact Phone: ' + phone + '\n\n' +
+        'Message: \n' + message + '\n' +
+        '------------------------------------------------\n\n' +
+        'Best Regards,\n' +
+        '[Your Company Name]';
 
-      var mailtoLink = 'mailto:example@example.com?subject=' + encodeURIComponent(emailSubject) +
-        '&body=' + encodeURIComponent(emailBody);
+      var mailtoLink = 'mailto:example@example.com?subject=New Service Inquiry&body=' + encodeURIComponent(emailBody);
+
       window.location.href = mailtoLink;
     });
-
   </script>
+
   <script src="assets\js\vendor\jquery-2.1.4.min.js"></script>
   <script src="assets\js\owl.carousel.min.js"></script>
   <script src="assets\js\isotope.pkgd.min.js"></script>
