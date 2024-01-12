@@ -86,75 +86,55 @@
   <section id="contact" class="contact-section section-padding">
     <div class="container">
       <div class="section-content">
-        <div class="col-md-7 >
-          <form action=" mailto:example@example.com" method="post" enctype="text/plain">
-          <div class="">
-            <div class="col-md-6">
-              <input class="" type="text" name="name" placeholder="Din Namn*">
+        <div class="col-md-7">
+          <!-- Updated action attribute and added id to form -->
+          <form id="contactForm" action="javascript:void(0);" method="post" enctype="text/plain">
+            <div class="">
+              <div class="col-md-6">
+                <input class="" type="text" name="name" placeholder="Ditt Namn*" required>
+              </div>
+              <div class="col-md-6">
+                <input class="" type="email" name="email" placeholder="Din Email*" required>
+              </div>
+              <div class="col-md-6">
+                <select class="" name="service" required>
+                  <option class="" value="">Välj en Service*</option>
+                  <option class="" value="service1">VIP</option>
+                  <option class="" value="service2">EVENT</option>
+                  <option class="" value="service3">GRUPPRESOR: IDROTTSRESOR</option>
+                  <option class="" value="service3">IDROTTSRESOR</option>
+                  <option class="" value="service3">SIGHTSEEING</option>
+                  <option class="" value="service3">SKOLRESOR</option>
+                  <option class="" value="service3">HYRA BUSS</option>
+                  <option class="" value="service3">AIRPORT TRANSFER</option>
+                  <option class="" value="service3">BUSSAR FÖR ARRANGÖRER OCH EVENTBYRÅER</option>
+                  <option class="" value="service3">PROJEKTLEDARE</option>
+                  <option class="" value="service3">TRAFIKLEDARE</option>
+                  <option class="" value="service3">SÄKERHETS OCH BEVAKNINGSPERSONAL</option>
+                  <option class="" value="service3">TJÄNSTER TILL BUSS & TRANSPORTFÖRETAG</option>
+                  <option class="" value="service3">UTHYRNING AV BUSSFÖRARE & TRAFIKLEDARE
+                  </option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <!-- Changed the name attribute to "phone" -->
+                <input class="" type="number" name="phone" placeholder="Telefon*" required>
+              </div>
             </div>
-            <div class="col-md-6">
-              <input class="" type="email" name="email" placeholder="Din Email*">
+            <div class="">
+              <div class="col-md-12">
+                <textarea name="message" class="" placeholder="Meddelande*" required></textarea>
+              </div>
             </div>
-            <div class="col-md-6">
-              <select class="" name="service">
-                <option class="" value="">Valj en Service*</option>
-                <option class="" value="service1">VIP</option>
-                <option class="" value="service2">EVENT</option>
-                <option class="" value="service3">GRUPPRESOR: IDROTTSRESOR</option>
-                <option class="" value="service3">IDROTTSRESOR</option>
-                <option class="" value="service3">SIGHTSEEING</option>
-                <option class="" value="service3">SKOLRESOR</option>
-                <option class="" value="service3">HYRA BUSS</option>
-                <option class="" value="service3">AIRPORT TRANSFER</option>
-                <option class="" value="service3">BUSSAR FÖR ARRANGÖRER OCH EVENTBYRÅER</option>
-                <option class="" value="service3">PROJEKTLEDARE</option>
-                <option class="" value="service3">TRAFIKLEDARE</option>
-                <option class="" value="service3">SÄKERHETS OCH BEVAKNINGSPERSONAL</option>
-                <option class="" value="service3">TJÄNSTER TILL BUSS & TRANSPORTFÖRETAG</option>
-                <option class="" value="service3">UTHYRNING AV BUSSFÖRARE & TRAFIKLEDARE
-                </option>
-                <!-- Add more options as needed -->
-              </select>
-            </div>
-            <div class="col-md-6">
-              <input class="" type="number" name="website" placeholder="phone*">
-            </div>
-
-          </div><!-- /.input-box -->
-
-          <div class="">
             <div class="col-md-12">
-              <textarea name="message" class="" placeholder="Message*" required=""></textarea>
+              <p class="submit-box"><input type="submit" class="base-bg" value="Skicka Meddelande"></p>
             </div>
-          </div><!-- /.message-box -->
-          <div class="col-md-12">
-            <p class="submit-box"><input type="submit" class="base-bg" value="Send Message"></p>
-          </div>
           </form>
-        </div><!-- /.col-md-7 -->
-        <div class="col-md-5 wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0.6s">
-          <div class="section-head text-center">
-            <h2>Boka <span>Buss</span></h2>
-            <h3 class="gray">eller</h3>
-            <h3 class="gray">KONTAKTA OSS</h3>&nbsp;
-            <h2>+46-123-456-789</h2>
-          </div>
-        </div><!-- /.col-md-5 -->
-      </div><!-- /.section-content -->
+        </div>
+        <!-- Additional content here -->
+      </div>
     </div>
   </section>
-
-  <!-- End Of Best Service Section -->
-
-
-
-  <!-- End of Quote Section -->
-
-  <!-- Footer Area -->
-
-  <!-- End of Footer Area -->
-
-  <!-- Js Functions  for Menu -->
   <script>
     document.getElementById('contactForm').addEventListener('submit', function (event) {
       event.preventDefault();
@@ -162,27 +142,35 @@
       var name = document.querySelector('input[name="name"]').value;
       var email = document.querySelector('input[name="email"]').value;
       var service = document.querySelector('select[name="service"]').value;
-      var phone = document.querySelector('input[name="website"]').value; // Assuming 'website' is the phone number
+      var phone = document.querySelector('input[name="phone"]').value;
       var message = document.querySelector('textarea[name="message"]').value;
 
-      var emailBody =
-        'Hello,\n\n' +
-        'You have received a new service inquiry from your website. Here are the details:\n\n' +
-        '------------------------------------------------\n' +
-        'Name: ' + name + '\n' +
-        'Email: ' + email + '\n' +
-        'Service Interested In: ' + service + '\n' +
-        'Contact Phone: ' + phone + '\n\n' +
-        'Message: \n' + message + '\n' +
-        '------------------------------------------------\n\n' +
-        'Best Regards,\n' +
-        '[Your Company Name]';
+      var emailBody = `
+        Hej [Ditt Företags Namn],
+  
+        Jag har några frågor och förfrågningar angående era tjänster. Vänligen hitta mina detaljer och förfrågningar nedan:
+  
+        Namn: ${name}
+        E-post: ${email}
+        Telefon: ${phone}
+        Intresserad av Tjänst: ${service}
+  
+        Meddelande:
+        ${message}
+  
+        Jag ser fram emot ett snabbt svar.
+  
+        Med vänliga hälsningar,
+        ${name}
+      `;
 
-      var mailtoLink = 'mailto:example@example.com?subject=New Service Inquiry&body=' + encodeURIComponent(emailBody);
+      var mailtoLink = 'mailto:example@example.com?subject=Förfrågan från ' + encodeURIComponent(name) + '&body=' + encodeURIComponent(emailBody);
 
       window.location.href = mailtoLink;
     });
   </script>
+
+
 
   <script src="assets\js\vendor\jquery-2.1.4.min.js"></script>
   <script src="assets\js\owl.carousel.min.js"></script>
