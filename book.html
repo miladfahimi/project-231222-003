@@ -91,39 +91,41 @@
           <form id="contactForm" action="javascript:void(0);" method="post" enctype="text/plain">
             <div class="">
               <div class="col-md-6">
-                <input class="" type="text" name="name" placeholder="Ditt Namn*" required>
+                <input class="" type="text" name="name" placeholder="Ditt Namn*">
               </div>
               <div class="col-md-6">
-                <input class="" type="email" name="email" placeholder="Din Email*" required>
+                <input class="" type="email" name="email" placeholder="Din Email*">
               </div>
               <div class="col-md-6">
-                <select class="" name="service" required>
+                <select class="" name="service">
                   <option class="" value="">Välj en Service*</option>
-                  <option class="" value="service1">VIP</option>
-                  <option class="" value="service2">EVENT</option>
-                  <option class="" value="service3">GRUPPRESOR: IDROTTSRESOR</option>
-                  <option class="" value="service3">IDROTTSRESOR</option>
-                  <option class="" value="service3">SIGHTSEEING</option>
-                  <option class="" value="service3">SKOLRESOR</option>
-                  <option class="" value="service3">HYRA BUSS</option>
-                  <option class="" value="service3">AIRPORT TRANSFER</option>
-                  <option class="" value="service3">BUSSAR FÖR ARRANGÖRER OCH EVENTBYRÅER</option>
-                  <option class="" value="service3">PROJEKTLEDARE</option>
-                  <option class="" value="service3">TRAFIKLEDARE</option>
-                  <option class="" value="service3">SÄKERHETS OCH BEVAKNINGSPERSONAL</option>
-                  <option class="" value="service3">TJÄNSTER TILL BUSS & TRANSPORTFÖRETAG</option>
-                  <option class="" value="service3">UTHYRNING AV BUSSFÖRARE & TRAFIKLEDARE
+                  <option class="" value="VIP">VIP</option>
+                  <option class="" value="EVENT">EVENT</option>
+                  <option class="" value="GRUPPRESOR: IDROTTSRESOR">GRUPPRESOR: IDROTTSRESOR</option>
+                  <option class="" value="IDROTTSRESOR">IDROTTSRESOR</option>
+                  <option class="" value="SIGHTSEEING">SIGHTSEEING</option>
+                  <option class="" value="SKOLRESOR">SKOLRESOR</option>
+                  <option class="" value="HYRA BUSS">HYRA BUSS</option>
+                  <option class="" value="AIRPORT TRANSFER">AIRPORT TRANSFER</option>
+                  <option class="" value="BUSSAR FÖR ARRANGÖRER OCH EVENTBYRÅER">BUSSAR FÖR ARRANGÖRER OCH EVENTBYRÅER
+                  </option>
+                  <option class="" value="PROJEKTLEDARE">PROJEKTLEDARE</option>
+                  <option class="" value="TRAFIKLEDARE">TRAFIKLEDARE</option>
+                  <option class="" value="SÄKERHETS OCH BEVAKNINGSPERSONAL">SÄKERHETS OCH BEVAKNINGSPERSONAL</option>
+                  <option class="" value="TJÄNSTER TILL BUSS & TRANSPORTFÖRETAG">TJÄNSTER TILL BUSS & TRANSPORTFÖRETAG
+                  </option>
+                  <option class="" value="UTHYRNING AV BUSSFÖRARE & TRAFIKLEDARE">UTHYRNING AV BUSSFÖRARE & TRAFIKLEDARE
                   </option>
                 </select>
               </div>
               <div class="col-md-6">
                 <!-- Changed the name attribute to "phone" -->
-                <input class="" type="number" name="phone" placeholder="Telefon*" required>
+                <input class="" type="number" name="phone" placeholder="Telefon*">
               </div>
             </div>
             <div class="">
               <div class="col-md-12">
-                <textarea name="message" class="" placeholder="Meddelande*" required></textarea>
+                <textarea name="message" class="" placeholder="Meddelande & frågor*"></textarea>
               </div>
             </div>
             <div class="col-md-12">
@@ -146,7 +148,7 @@
       var message = document.querySelector('textarea[name="message"]').value;
 
       var emailBody = `
-        Hej [Ditt Företags Namn],
+        Hej,
   
         Jag har några frågor och förfrågningar angående era tjänster. Vänligen hitta mina detaljer och förfrågningar nedan:
   
@@ -155,7 +157,7 @@
         Telefon: ${phone}
         Intresserad av Tjänst: ${service}
   
-        Meddelande:
+        Meddelande & frågor:
         ${message}
   
         Jag ser fram emot ett snabbt svar.
@@ -164,7 +166,7 @@
         ${name}
       `;
 
-      var mailtoLink = 'mailto:example@example.com?subject=Förfrågan från ' + encodeURIComponent(name) + '&body=' + encodeURIComponent(emailBody);
+      var mailtoLink = 'mailto:example@example.com?subject=Förfrågan från ' + encodeURIComponent(name) + ' om "' + encodeURIComponent(service) + '"' + '&body=' + encodeURIComponent(emailBody);
 
       window.location.href = mailtoLink;
     });
