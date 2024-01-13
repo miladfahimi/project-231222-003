@@ -167,38 +167,33 @@
     <div class="container">
       <div class="section-content">
         <div class="col-md-7 wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0.4s">
-          <form action="#" method="post">
+          <form id="contactForm">
             <div class="input-box">
               <div class="col-md-6">
-                <input class="form-control user-name" type="text" name="name" placeholder="Your Name*" required="">
+                <input class="form-control user-name" type="text" name="name" placeholder="Your Name*" required>
               </div>
               <div class="col-md-6">
-                <input class="form-control user-mail" type="email" name="email" placeholder="Your Email*" required="">
-              </div>
-              <div class="col-md-6">
-                <input class="form-control user-web" type="url" name="website" placeholder="Date*">
-              </div>
-              <div class="col-md-6">
-                <input class="form-control user-web" type="url" name="website" placeholder="Time*">
+                <input class="form-control user-mail" type="email" name="email" placeholder="Your Email*" required>
               </div>
             </div><!-- /.input-box -->
 
             <div class="message-box">
               <div class="col-md-12">
-                <textarea name="message" class="form-control" placeholder="Message*" required=""></textarea>
+                <textarea name="message" class="form-control" placeholder="Message*" required></textarea>
               </div>
             </div><!-- /.message-box -->
             <div class="col-md-12">
               <p class="submit-box"><input type="submit" class="base-bg" value="Send Message"></p>
             </div>
           </form>
+
         </div><!-- /.col-md-7 -->
         <div class="col-md-5 wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0.6s">
           <div class="section-head text-center">
-            <h2>Boka <span>Buss</span></h2>
+            <h2><a href="book.html">Boka <span>Buss</span></a></h2>
             <h3 class="gray">eller</h3>
             <h3 class="gray">KONTAKTA OSS</h3>&nbsp;
-            <h2>+46-123-456-789</h2>
+            <h2><a style="color: white" href="tel: +46704837371">+46-704837371</a></h2>
           </div>
         </div><!-- /.col-md-5 -->
       </div><!-- /.section-content -->
@@ -222,7 +217,8 @@
   <footer>
     <div class="copyright-footer black-bg text-center">
       <div class="container">
-        <p class="font-Montserrat text-center text-uppercase"> Swedish Transport Service. All rights reserved. </p>
+        <p class="font-Montserrat text-center text-uppercase"> Swedish Transport Service. All rights reserved.
+        </p>
         <div class="social-btn">
           <ul>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -238,6 +234,20 @@
   <!-- End of Footer Area -->
 
   <!-- Js Functions  for Menu -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var name = document.querySelector('input[name="name"]').value;
+      var email = document.querySelector('input[name="email"]').value;
+      var message = document.querySelector('textarea[name="message"]').value;
+
+      var emailBody = 'Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message;
+
+      window.location.href = 'mailto:swedishtransportservices@google.com?subject=Contact from Website&body=' + encodeURIComponent(emailBody);
+    });
+  </script>
+
   <script src="assets\js\vendor\jquery-2.1.4.min.js"></script>
   <script src="assets\js\owl.carousel.min.js"></script>
   <script src="assets\js\bootstrap.min.js"></script>
