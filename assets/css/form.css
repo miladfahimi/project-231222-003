@@ -1,0 +1,21 @@
+.select-form {
+  background: #fff !important;
+}
+.select-form-option {
+  background: #fff !important;
+}
+.input-form {
+  /* max-width: 400px; */
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 4px;
+}
+.input-form-btn-cont {
+  width: 100%;
+}
+.input-form-btn {
+  width: 100%;
+  height: 50px;
+  background-color: cornflowerblue;
+  color: white;
+}

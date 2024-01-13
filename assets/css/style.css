@@ -1579,14 +1579,9 @@ body.home-dark {
   margin-bottom: 10px;
 }
 .select-styled {
-  color: #fff;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 7px 15px;
-  border: 1px solid #618bed;
+  color: #000;
+  background-color: white;
+  padding: 11px 14px;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
@@ -1596,21 +1591,24 @@ body.home-dark {
   top: 12px;
   right: 25px;
   content: "\f103";
+  overflow-y: scroll;
+  max-height: 300px;
+
   position: absolute;
   font: normal normal normal 14px/1 FontAwesome;
 }
 .select-styled:hover {
-  color: #ffffff;
-  border-color: #111217;
-  background-color: #111217;
+  color: #000000;
+  border-color: #ffffff;
+  background-color: #ffffff;
 }
 .select-styled:hover:after {
   border-color: #ffffff transparent transparent transparent;
 }
 .select-styled:active,
 .select-styled.active {
-  color: #ffffff;
-  background-color: #111217;
+  color: #000000;
+  background-color: #ffffff;
 }
 .select-styled:active:after,
 .select-styled.active:after {
@@ -1628,14 +1626,18 @@ body.home-dark {
   padding: 0;
   list-style: none;
   background-color: #111217;
+  max-height: 300px;
+  overflow-y: scroll;
 }
 .select-options li {
   margin: 0;
   padding: 8px 0;
   text-indent: 15px;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #cac8c8;
   -webkit-transition: all 0.15s ease-in;
   transition: all 0.15s ease-in;
+  background-color: white;
+  color: black;
 }
 .select-options li:hover {
   color: #000;

@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="assets\css\menu\menuzord-min.css">
   <!-- Main css file -->
   <link rel="stylesheet" href="assets\css\style.css">
+  <link rel="stylesheet" href="assets\css\form.css">
   <!-- Responsive css file -->
   <link rel="stylesheet" href="assets\css\responsive.css">
   <!-- Modernizr file -->
@@ -91,45 +92,49 @@
           <form id="contactForm" action="javascript:void(0);" method="post" enctype="text/plain">
             <div class="">
               <div class="col-md-6">
-                <input class="" type="text" name="name" placeholder="Ditt Namn*">
+                <input class="input-form" type="text" name="name" placeholder="Ditt Namn*">
               </div>
               <div class="col-md-6">
-                <input class="" type="email" name="email" placeholder="Din Email*">
+                <input class="input-form" type="email" name="email" placeholder="Din Email*">
               </div>
               <div class="col-md-6">
-                <select class="" name="service">
-                  <option class="" value="">Välj en Service*</option>
-                  <option class="" value="VIP">VIP</option>
-                  <option class="" value="EVENT">EVENT</option>
-                  <option class="" value="GRUPPRESOR: IDROTTSRESOR">GRUPPRESOR: IDROTTSRESOR</option>
-                  <option class="" value="IDROTTSRESOR">IDROTTSRESOR</option>
-                  <option class="" value="SIGHTSEEING">SIGHTSEEING</option>
-                  <option class="" value="SKOLRESOR">SKOLRESOR</option>
-                  <option class="" value="HYRA BUSS">HYRA BUSS</option>
-                  <option class="" value="AIRPORT TRANSFER">AIRPORT TRANSFER</option>
-                  <option class="" value="BUSSAR FÖR ARRANGÖRER OCH EVENTBYRÅER">BUSSAR FÖR ARRANGÖRER OCH EVENTBYRÅER
+                <select class="select-form" name="service">
+                  <option class="select-form-option" value="" disabled selected hidden>Välj en Service*</option>
+                  <option class="select-form-option" value="VIP">VIP</option>
+                  <option class="select-form-option" value="EVENT">EVENT</option>
+                  <option class="select-form-option" value="GRUPPRESOR: IDROTTSRESOR">GRUPPRESOR: IDROTTSRESOR</option>
+                  <option class="select-form-option" value="IDROTTSRESOR">IDROTTSRESOR</option>
+                  <option class="select-form-option" value="SIGHTSEEING">SIGHTSEEING</option>
+                  <option class="select-form-option" value="SKOLRESOR">SKOLRESOR</option>
+                  <option class="select-form-option" value="HYRA BUSS">HYRA BUSS</option>
+                  <option class="select-form-option" value="AIRPORT TRANSFER">AIRPORT TRANSFER</option>
+                  <option class="select-form-option" value="BUSSAR FÖR ARRANGÖRER OCH EVENTBYRÅER">BUSSAR FÖR ARRANGÖRER
+                    OCH EVENTBYRÅER
                   </option>
-                  <option class="" value="PROJEKTLEDARE">PROJEKTLEDARE</option>
-                  <option class="" value="TRAFIKLEDARE">TRAFIKLEDARE</option>
-                  <option class="" value="SÄKERHETS OCH BEVAKNINGSPERSONAL">SÄKERHETS OCH BEVAKNINGSPERSONAL</option>
-                  <option class="" value="TJÄNSTER TILL BUSS & TRANSPORTFÖRETAG">TJÄNSTER TILL BUSS & TRANSPORTFÖRETAG
+                  <option class="select-form-option" value="PROJEKTLEDARE">PROJEKTLEDARE</option>
+                  <option class="select-form-option" value="TRAFIKLEDARE">TRAFIKLEDARE</option>
+                  <option class="select-form-option" value="SÄKERHETS OCH BEVAKNINGSPERSONAL">SÄKERHETS OCH
+                    BEVAKNINGSPERSONAL</option>
+                  <option class="select-form-option" value="TJÄNSTER TILL BUSS & TRANSPORTFÖRETAG">TJÄNSTER TILL BUSS &
+                    TRANSPORTFÖRETAG
                   </option>
-                  <option class="" value="UTHYRNING AV BUSSFÖRARE & TRAFIKLEDARE">UTHYRNING AV BUSSFÖRARE & TRAFIKLEDARE
+                  <option class="select-form-option" value="UTHYRNING AV BUSSFÖRARE & TRAFIKLEDARE">UTHYRNING AV
+                    BUSSFÖRARE & TRAFIKLEDARE
                   </option>
                 </select>
               </div>
               <div class="col-md-6">
                 <!-- Changed the name attribute to "phone" -->
-                <input class="" type="number" name="phone" placeholder="Telefon*">
+                <input class="input-form" type="number" name="phone" placeholder="Telefon*">
               </div>
             </div>
             <div class="">
               <div class="col-md-12">
-                <textarea name="message" class="" placeholder="Meddelande & frågor*"></textarea>
+                <textarea name="message" class="input-form" placeholder="Meddelande & frågor*"></textarea>
               </div>
             </div>
             <div class="col-md-12">
-              <p class="submit-box"><input type="submit" class="base-bg" value="Skicka Meddelande"></p>
+              <p class="input-form-btn-cont"><input type="submit" class="input-form-btn" value="Skicka Meddelande"></p>
             </div>
           </form>
         </div>
